@@ -19,9 +19,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+    "url": "https://github.com/LIVIDnet/livid.pw/issues"
   },
-  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "homepage": "https://github.com/LIVIDnet/livid.pw#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-navigation": "^0.1.1",
