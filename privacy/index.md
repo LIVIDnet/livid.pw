@@ -97,6 +97,6 @@ You are free to direct any general questions about this notice and request a cop
 
 ## 4. Changes to this notice
 
-All changes to this notice are made be made publicly available. Please check the notice regularly.
+All changes to this notice are made publicly available. Please check the notice regularly.
 
   - Last update: January 1st, 2021
