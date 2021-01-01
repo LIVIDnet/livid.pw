@@ -1,0 +1,333 @@
+:root {
+  --red: rgb(197, 0, 74);
+  --darkred: hsla(334, 85%, 38%, 0.562);
+  --lightgray: rgb(224, 224, 224);
+  --gray: rgb(191, 191, 191);
+  --darkgray: rgb(51, 51, 51);
+  --lightgray: rgb(204, 204, 204);
+  --white: rgb(255, 255, 255);
+  --black: rgb(31, 30, 28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;  color: var(--lightgray);
+  background-color: var(--black);
+}
+
+/* Container */
+
+.container {
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container main {
+  padding: 1rem;
+}
+
+.container main :first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+p,
+.tmpl-post li,
+img {
+  max-width: 49em; /* 600px /16 */
+}
+
+p,
+.tmpl-post li {
+  line-height: 1.45;
+}
+
+a[href] {
+  color: var(--white);
+}
+
+main a[href]:visited {
+  color: var(--lightgray);
+}
+
+table {
+  margin: 1em 0;
+}
+
+table td,
+table th {
+  padding-right: 1em;
+}
+
+pre,
+code,
+pgp {
+  font-family: "Fira Code", "Ubuntu Mono", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  line-height: 1.5;
+}
+
+pre {
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 1em;
+  margin: .5em 0;
+  background-color: rgb(36, 36, 36);
+}
+
+.tmpl-pgp pre {
+  text-align: center;
+}
+
+.tmpl-legal {
+  font-weight: 700;
+}
+
+.main-header {
+  border-bottom: 1px dashed var(--lightgray);
+}
+
+/* Highlight (taken by eleventy-base-blog) */
+
+.highlight-line {
+  display: block;
+  padding: 0.125em 1em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlight-line:empty:before {
+  content: " ";
+}
+
+.highlight-line + br {
+  display: none;
+}
+
+.highlight-line-isdir {
+  color: rgb(176, 176, 176);
+  background-color: rgb(33, 33, 33);
+}
+.highlight-line-active {
+  background-color: rgb(69, 69, 69);
+  background-color: rgba(69, 69, 69, 0.8);
+}
+.highlight-line-add {
+  background-color: rgb(69, 132, 75);
+}
+.highlight-line-remove {
+  background-color: rgb(171, 47, 47);
+}
+
+/* Header */
+
+.home {
+  padding: 0 1rem;
+  float: left;
+  margin: 1rem 0;
+  font-size: 1em;
+}
+
+.home :link:not(:hover) {
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 1px dashed var(--lightgray);
+}
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header .nav {
+  float: right;
+}
+
+/* Footer */
+
+footer {
+  margin: 1em;
+  text-align: center;
+  border-top: 1px dashed var(--lightgray);
+  border-bottom: 1px dashed var(--lightgray);
+  padding: 0;
+}
+
+.footer-text {
+  font-size: 0.75em;
+  line-height: 0.75em;
+}
+
+footer a[href] {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer a[href]:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer a[href]:hover {
+  text-decoration: underline;
+}
+
+footer .nav {
+  float: center;
+}
+
+/* Nav */
+
+.nav {
+  padding: 0;
+  list-style: none;
+  margin-left: 1em;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.nav-item a[href]:hover {
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav-item a[href]:not(:hover) {
+  text-decoration: none;
+}
+
+.nav-item-active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Posts list */
+
+article {
+  padding: 0em 0em 1.5em 0em;
+  list-style-type: none;
+}
+
+.article {
+  padding: 0;
+}
+
+.article-item {
+  list-style-type: none;
+  list-style: none;
+  counter-increment: start-from -1;
+}
+
+.article-meta,
+.article-item:before {
+  font-size: 0.8125em;
+  color: var(--lightgray);
+}
+
+.article-meta {
+  word-spacing: -0.5px;
+}
+
+.description {
+  word-spacing: -0.3px;
+  font-size: 0.875em;
+}
+
+.tags {
+  word-spacing: -0.3px;
+  font-size: 0.875em;
+}
+
+.article-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0em 0em 0.5em 0em; /* 4px 3px /16 */
+}
+
+.article-item-active .article-link {
+  font-weight: bold;
+}
+
+.tmpl-home .article-link {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.tmpl-home img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Tags */
+
+.tag {
+  display: inline-block;
+  vertical-align: text-top;
+  text-transform: uppercase;
+  font-size: 0.625em; /* 10px /16 */
+  padding: 2px 4px;
+  margin-left: 0.8em; /* 8px /10 */
+  background-color: var(--darkred);
+  color: var(--white);
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+a[href].tag,
+a[href].tag:visited {
+  color: #fff;
+}
+
+/* Direct Links / Markdown Headers */
+.direct-link {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  margin-left: .1em;
+}
+a[href].direct-link,
+a[href].direct-link:visited {
+  color: transparent;
+}
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
+  color: #aaa;
+}
